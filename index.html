@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/84257b5221.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Best For Last Specialties</title>
+  </head>
+
+  <body id="home">
+    <header class="hero">
+      <nav id="navbar" class="navbar top">
+        <a class="navbar-brand" href="#home"
+          ><i class="fas fa-gifts"></i>Best For Last Specialties</a
+        >
+        <ul class="list-items">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about" class="flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1">
+              <img
+                class="about-img"
+                src="images/profilepic.jpg"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-primary">
+              <h1>About Us</h1>
+
+              <p>
+                Denny and Sheila Lamson were born just across the California
+                border in Siskiyou County. High school sweethearts, they
+                recently celebrated their 46th wedding anniversary. They have
+                three adult children, 9 grandchildren and most recently, their
+                first great grandchild.
+              </p>
+
+              ​
+
+              <p>
+                Denny and Sheila moved to Jackson County, Oregon in 1986, where
+                Denny began a 30-year career in financial services. For the
+                final chapter of their work life, Denny and Sheila recently
+                purchased the Southern Oregon and Central Oregon Tabasco Brands
+                Specialty Foods and Gifts distributorship. Their goal is to
+                bring these products along with many other fine food and gift
+                lines from some the best companies they can find. Staying active
+                and working together while enjoying friendly people, fun events,
+                and great food, seems to them to be the perfect final chapter of
+                what has been a wonderful life. They believe they have truly
+                saved the “Best For Last”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products flex-columns flex-reverse">
+        <div class="row">
+          <div class="column bg-primary">
+            <div class="column-1 column-1-products">
+              <img
+                class="tabasco-logo"
+                src="images/tabasco.jpg"
+                alt="tabasco logo"
+              />
+              <img
+                class="braswell-logo"
+                src="images/braswell-logo.jpg"
+                alt="braswell logo"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-primary">
+              <h1>Our Products</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                illum, animi earum ea amet sequi reiciendis sit corporis sunt
+                iusto cupiditate odio maxime adipisci cumque eligendi nemo
+                dolore id itaque?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact flex-columns">
+        <div class="row">
+          <div class="column">
+            <div class="column-1-logo">
+              <img
+                class="callback-logo"
+                src="images/bfls-logo.png"
+                alt="logo"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="column-2 bg-primary">
+              <h1>Request Callback</h1>
+              <form action="" class="callback-form">
+                <div class="form-control">
+                  <label for="name"></label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter name"
+                  />
+                </div>
+                <div class="form-control">
+                  <label for="email"></label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-control">
+                  <label for="phone"></label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter phone"
+                  />
+                </div>
+                <input type="submit" value="Send" id="submit" class="btn" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Denny Lamson, Owner/Operator - 541-941-4458 dennylamson@gmail.com
+      </p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const navbar = document.getElementById('navbar');
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top');
+          if (!scrolled) {
+            navbar.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(function () {
+            navbar.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add('top');
+          scrolled = false;
+        }
+      };
+
+      // Smooth Scrolling
+      $('#navbar a, .btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

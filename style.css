@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #7da05a;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 0px;
+}
+
+.bg-secondary {
+  background: #7da05a;
+}
+
+/*NAVBAR*/
+.navbar {
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fdfdfd;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+.navbar ul a {
+  color: #fdfdfd;
+  padding: 10px 20px;
+  margin: 0px 5px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul a:hover {
+  border-bottom: 2px solid #fdfdfd;
+}
+
+.navbar-brand {
+  color: #fdfdfd;
+  padding: 10px 20px;
+  margin: 0px 5px;
+}
+
+.fas {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tabasco-logo {
+  padding: 150px;
+}
+
+/*HEADER */
+
+.hero {
+  background: url('images/bfls-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*About Section*/
+
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+.bg-primary {
+  background: #fdfdfd;
+}
+
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.flex-columns .column-products {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.column-1-products {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-products {
+  display: flex;
+  justify-content: center;
+}
+
+.tabasco-logo {
+  padding: 0;
+  width: 50%;
+}
+
+.braswell-logo {
+  width: 50%;
+}
+
+.column-1-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-1-callback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.callback-logo {
+  max-width: 400px;
+}
+
+/* Callback form */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #333 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #7da05a;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* Post */
+.post {
+  padding: 50px 30px;
+}
+
+.post h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: #ccc solid 1px;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+.post img {
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+/*FOOTER*/
+
+footer {
+  background: url('images/header-jars.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+/*MOBILE*/
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 5px;
+  }
+
+  .flex-columns.flex-reverse .row {
+    flex-direction: column-reverse;
+  }
+
+  .flex-columns .column {
+    flex-direction: column-reverse;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .callback-logo {
+    display: none;
+  }
+}
